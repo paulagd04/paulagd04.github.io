@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+
+ <html> 
+ <head>  
+	<meta charset="UTF-8"> 
+	<style>
+	*{
+		font-family:arial;
+	}
+    .azul { 
+		color: blue ; 
+		font-family: Cambria;
+	}
+	.rojo { color: red ; }
+	#verde { background-color: green ; }
+	
+	
+	h1,p,em,h2{
+	  background-color: purple; 
+	}
+	ol li{ color: orange; }
+	
+	#algo:hover{
+	background-color:green;
+	}
+	
+	
+	</style> 
+</head>  
+
+  
+
+<body>  
+
+	<h1>Tipos de selectores que entran en examen</h1>  
+
+	<h2> Clase (class=”.”) </h2>
+	<p> El selector de clase class= "." sirve para cambiar de color un elemento específico, ya sea un
+	título, un párrafo o el fondo. <br>
+	Para seleccionar todo tipo de elementos con una clase específica, escriba un carácter de punto (.) seguido de la clase valor del atributo. <br>  
+    El selector element.class selecciona los elementos especificados con el valor del atributo de clase especificado. <br>
+   Para seleccionar solo un tipo de elementos con una clase específica, escriba el elemento name, 
+   luego un carácter de punto (.), seguido del valor del atributo de clase <br>
+   Por ejemplo, quiero que el siguiente título h1 sea de color azul pero el que hay debajo (que también es un h1) lo quiero de otro
+   diferente, para ello realizaremos unos cambios abriendo una etiqueta style y creando dos clases con diferentes colores. </p>
+   <h1 class= "azul"> Color azul </h1>
+   <h1 class= "rojo"> Color rojo </h1>
+
+    <h2> Identificador (id=”#”) </h2>
+	 <p> El selector CSS selecciona el elemento con el id especificado.
+	Para utilizar este selector tienes que escribir en el head dentro de una etiqueta style un # y el nombre del id,
+	luego agregas dentro de la etiqueta que quieras el id correspondiente y se queda del color que te pida. </p>
+	Ejemplo:
+	<h1 id= "verde"> Color verde </h1>
+
+    <h2> Todos los elementos (*) </h2>
+   <p> El selector universal CSS () selecciona todos los elementos de cualquier tipo.* <br>
+   El selector universal () también puede seleccionar todos los elementos dentro de otro elemento.* <br>
+   Este selector también se puede espaciar con nombres cuando se utiliza @namespace. <br>
+   ns|* - selecciona todos los elementos en el espacio de nombres ns <br>
+    *|* - selecciona todos los elementos <br>
+     |* - selecciona todos los elementos sin ningún espacio de nombres declarado <br> 
+	Ejemplo: el documento tiene letra arial. </p>
+
+    <h2> Varios elementos ( p, em, h1, h2) </h2>
+    <p> El selector varios elementos modifica a los elementos que tu señales con las <em> mismas
+	modificaciones </em>. <br> Voy a poner los elementos señalados en el título de color morado. <p> 
+	
+    <h2> Elementos contenidos en otros elementos (ol li)  </h2>
+	<p> Si haces lo mismo que en ejercicio anterior pero los elementos están contenidos dentro de otros
+	entonces lo pones sin comas. 
+	<ol> Lista ejemplo 
+	<li> Elemento 1 </li>
+	<li> Elemento 2 </li> 
+	<li> Elemento 3 </li>
+	</ol>
+</p>
+    <h2>Sobrevuleo (p:hover) </h2>
+	<p id="algo"> La pseudoclase CSS se utiliza para seleccionar elementos cuando se pasa el ratón por encima de ellos.:hover. <br>
+	Cuando pasas el ratón por encima de este párrafo se pone verde.</p>
+
+	
+</body>  
+
+  
+
+</html>  
