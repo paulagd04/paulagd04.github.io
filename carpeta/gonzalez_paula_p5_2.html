@@ -1,0 +1,42 @@
+<!doctype html> <!-- Indica que es un documento HTML -->
+<html>
+  <head>
+    <meta charset="utf-8" /> 
+    <title>Paula </title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Mi bonita casa</h1>
+
+
+    <script>
+    function setup() {
+    createCanvas(800, 800); 
+    background (200); 
+	// rectangulo rojo
+    fill (255, 87, 89);
+    rect (100, 300, 500, 400); 
+	// puerta
+    fill (141, 111, 100);
+    stroke (51, 31, 24);
+    strokeWeight (2);
+    rect (310, 500, 100, 200); 
+	// manilla
+    stroke (255, 222, 89);
+    line (400 ,583 ,400 ,583); 
+	// ventana izq
+    stroke (51, 31, 24); 
+    strokeWeight (3);
+    fill (202, 248, 250);
+    rect (150, 350, 150, 100);
+	// ventana derecha 
+    rect (400, 350, 150, 100);
+	// Tejado (vertice izquierda, vertice arriba, vertice derecha
+    triangle (100, 300, 350, 100, 600, 300,); 
+
+    }
+
+    </script>
+  </body>
+</html>
