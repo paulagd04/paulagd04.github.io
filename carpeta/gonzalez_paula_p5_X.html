@@ -1,0 +1,115 @@
+<!doctype html> <!-- Indica que es un documento HTML -->
+<html>
+  <head>
+    <meta charset="utf-8" /> 
+    <title>Paula </title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+
+  <body
+    <h1>Mi bonita casa</h1>
+
+
+    <script>
+    function setup() {
+	 // Tamaño del "sol" relativo al lienzo
+    d = min(width, height) * 0.6
+    r = d / 2;
+    // Posición inicial: empieza entrando desde la izquierda
+    x = -r;
+    y = height * 0.5;   // altura relativa (35% del alto)
+	// Velociad relativa al ancho (escala con el tamaño del lienzo)
+    v = width/100//rueba a ajustar este valor si va muy rápido/lento
+	}
+	function draw (){
+	createCanvas(1000, 1000); 
+    background(78, 244, 251); 
+	// sol
+	fill(255, 255, 138);
+	stroke (255, 255, 138);
+	strokeWeight(0);
+	circle(x,y,d);
+	// casa
+    fill(255, 222, 89);
+    rect (100, 300, 500, 400);
+	// puerta
+    fill (141, 111, 100);
+    stroke (51, 31, 24);
+    strokeWeight (2);
+    rect (310, 500, 100, 200); 
+	// manilla
+    stroke (255, 222, 89);
+    line (400 ,583 ,400 ,583); 
+	// ventana izq
+    stroke (51, 31, 24); 
+    strokeWeight (3);
+    fill (202, 248, 250);
+    rect (150, 350, 150, 100); 
+	// ventana derecha
+    rect (400, 350, 150, 100); 
+	// tejado (vertice izquierda	vertice arriba, vertice derecha)
+    fill (255, 87, 89);
+	triangle (100, 300, 350, 100, 600, 300,); 
+	// suelo
+    fill (0, 255, 0);
+	stroke (0, 255, 0); 
+	strokeWeight (0);
+	rect (0, 700, 1000, 600);
+	//arcoíris
+	noFill ();
+	stroke (255,0,0);
+	strokeWeight (5);
+	arc(350, 300, 600,500, PI, 0); // rojo
+	stroke (254, 153, 0);
+	arc(350, 300, 590,490, PI, 0); // naranja
+	stroke (255, 255, 1);
+	arc (350, 300, 580,480, PI, 0); // amarillo
+	stroke (90, 255, 1);
+	arc (350, 300, 570,470, PI, 0); // verde
+	stroke (1, 204, 255);
+	arc (350, 300, 560,460, PI, 0); // azul
+	stroke(158, 1, 255);
+	arc (350, 300, 550,450, PI, 0); // morado
+	//nube 1 (izquierda)
+    stroke (255,255,255);
+	fill (255,255,255);
+    circle (640, 300, 50);	
+	stroke (255,255,255);
+	fill (255,255,255);
+    circle (600, 300, 40);	
+	stroke (255,255,255);
+	fill (255,255,255);
+    circle (680, 300, 40);
+	// nube 2 (derecha)
+	stroke (255,255,255);
+	fill (255,255,255);
+    circle (60, 300, 50);	
+	stroke (255,255,255);
+	fill (255,255,255);
+    circle (20, 300, 40);	
+	stroke (255,255,255);
+	fill (255,255,255);
+    circle (100, 300, 40);
+	// coche estructura
+	fill(158, 1, 255);
+	stroke(158, 1, 255);
+	rect (700, 580, 200, 100);
+	rect (620, 650, 360, 50);
+	// ruedas
+	fill (0);
+	strokeWeight (0);
+	circle (680,700,50); 
+	circle (900,700,50); 
+	//ventanas 
+	fill (0);
+	rect (709, 590, 80, 50);
+	rect (810, 590, 80, 50);
+	
+	// --- 5) ACTUALIZACIÓN del estado (la animación) ---
+    // Cada frame, avanzamos x en v pixeles:
+    x = x + v;
+
+}
+    </script>
+  </body>
+</html>
