@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Globo que vuela</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+  <body>
+  <script>
+  // definimos las variables
+  let xG, yG, vyG;
+ 
+  function setup() {
+    createCanvas(600, 600);
+	//posicion de las variables
+	  xG = 0 * width; // eje x
+      yG = 0.9 * height; // eje y
+      v1 = 0.002 * height; // velocidad del globo hacia arriba
+      Sg = 0.08 * height;  // Tamaño del globo
+ 	  cuerda = 1.2 * Sg; // Largo de la cuerda 
+      v2= 0.002* width; // velocidad del globo hacia la derecha	  
+  }
+
+  function draw() {
+    // Fondo base
+    background(180, 210, 255);       
+	// Globo
+     fill(255, 80, 80);
+     circle(xG, yG, Sg);
+	// Cuerda
+     stroke(60);
+     strokeWeight(2);
+     line(xG, yG + 0.5 * Sg, xG, yG + 0.5 * Sg + cuerda)
+	//Movimiento del globo
+	 yG = yG - v1;
+	 xG= xG + v2;
+  }
+  </script>
+  </body>
+</html>
+  
