@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sistema solar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+  <body>
+  <script>
+  // definimos las variables
+  let xSo, ySo, dSo, rSo;
+  let xMe, yMe, dMe, rMe, aMe, vMe;
+  let xV, yV, dV, rV, aV, vV;
+  let xT, yT, dT, rT, aT, VT;
+  let xMa, yMa, dMa, rMa, aMa, vMa;
+  let xJ, yJ, dJ, rJ, aJ, vJ;
+  let xSa, ySa, dSa, rSa, aSa, vSa;
+  let xU, yU, dU, rU, aU, vU;
+  let xN, yN, dN, rN, aN, vN;
+
+  function setup() {
+    createCanvas(3000, 2000);
+	//posicion de las variables
+	//Sol
+	 xSo= width/2;
+	 ySo= height/2;
+	 dSo= width/9; 
+	 rSo= height/9 ;
+	 //Mercurio
+	 xMe= xSo + cos(aMe)*rMe;
+	 yMe= ySo + sin(aMe)*rMe;
+	 dMe= 0.1*dSo;
+	 rMe= 1.1* rSo;
+	 aMe=0;
+	 vMe=0.03;
+	 //Venus 
+	 xV= xSo + cos(aV)*rV;
+	 yV= ySo + sin(aV)*rV;
+     dV=0.2*dSo;
+	 rV= 1.6*rSo;
+	 aV=PI/3;
+	 vV=0.012;
+	 //Tierra
+		xT= xSo + cos(aT)*rT;
+	 yT= ySo + sin(aT)*rT;
+	 dT= 0.26*dSo;
+	 rT= 2.1*rSo;
+	 aT=PI;
+	 vT=0.01;
+	 //Marte
+	 xMa= xSo + cos(aMa)*rMa;
+	 yMa= ySo + sin(aMa)*rMa;
+	 dMa=0.14*dSo;
+	 rMa=2.5*rSo;
+	 aMa=PI;
+	 vMa=0.008;
+	 //Júpiter
+     xJ= xSo + cos(aJ)*rJ;
+	 yJ= ySo + sin(aJ)*rJ;
+	 dJ=0.6*dSo;
+	 rJ=3.2*rSo;
+	  aJ=4*PI/3;
+	 vJ=0.02;	 
+	 // Saturno
+	 xSa= xSo + cos(aSa)*rSa;
+	 ySa= ySo + sin(aSa)*rSa;
+	 dSa=0.65*dSo;
+	 rSa=4.2*rSo;
+	aSa=5*PI/3;
+	 vSa=0.01;
+	 //Urano
+	 xU= xSo + cos(aU)*rU;
+	 yU= ySo + sin(aU)*rU;
+	 dU=0.4*dSo;
+	 rU=5.1*rSo;
+	 aU=2.2*PI;
+	 vU=0.002;
+	 //Neptuno
+	 xN= xSo + cos(aN)*rN;
+	 yN= ySo +sin(aN)*rN;
+	 dN=0.38*dSo;
+	 rN=5.8*rSo;
+	 aN=2.6*PI;
+	 vN=0.0015;
+	 }
+  function draw() {
+    // Fondo base
+    background(0);       
+	//Sol
+     fill(255, 255, 0);
+     circle(xSo, ySo, dSo);
+	 //Mercurio
+	 aMe +=vMe;
+	 xMe= xSo + cos(aMe)*rMe;
+	 yMe= ySo + sin(aMe)*rMe;
+	 fill (153, 255, 204);
+	 circle (xMe, yMe, dMe); 
+	 //Venus
+	 aV +=vV;
+	 xV= xSo + cos(aV)*rV;
+	 yV= ySo + sin (aV)*rV;
+	 fill(222, 124, 22);
+	 circle(xV,yV,dV);
+	 //Tierra
+	 aT +=vT;
+	 xT= xSo + cos(aT)*rT;
+	 yT= ySo + sin(aT)*rT;
+	 fill(0, 255, 0);
+	 circle (xT,yT,dT);
+	 //Marte 
+	 aMa +=vMa;
+	 xMa= xSo + cos(aMa)*rMa;
+	 yMa= ySo + sin(aMa)*rMa;
+	 fill(255, 0, 0);
+	 circle(xMa,yMa,dMa);
+	 //Jupiter
+	 aJ +=vJ;
+	 xJ= xSo + cos(aJ)*rJ;
+	 yJ= ySo + sin(aJ)*rJ;
+	 fill (255, 153, 102);
+	 circle (xJ,yJ,dJ);
+	 //Saturno
+	 aSa +=vSa;
+	  xSa= xSo + cos(aSa)*rSa;
+	 ySa= ySo + sin(aSa)*rSa;
+	 fill (255, 255, 102);
+	 circle (xSa,ySa,dSa);
+	 //Urano 
+	 aU +=vU;
+	 xU= xSo + cos(aU)*rU;
+	 yU= ySo + sin(aU)*rU;
+	 fill (0, 255, 255);
+	 circle (xU,yU,dU);
+	 //Neptuno 
+	 aN +=vN;
+	 xN= xSo + cos(aN)*rN;
+	 yN= ySo +sin(aN)*rN;
+	 fill (102, 102, 255);
+	 circle (xN,yN,dN);
+	 
+}
+  </script>
+  </body>
+</html>
