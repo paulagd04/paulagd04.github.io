@@ -138,6 +138,27 @@
 // Si toca el suelo, corregimos 
 if (yP > groundY) { yP = groundY; vY = 0; }
   dibujarStickman();
+  //cuadrado 
+  fill(255, 102, 102);
+  noStroke ();
+  rect(x0,y0,w0,h0);
+  x0 +=v0;
+  //reiniciar posición
+  if (x0 < -w0) {
+  x0 = width;
+  }
+  //diparo
+  if (disparoActivo) {
+  fill(255, 0, 0);
+  circle(xD, yD, tD);
+  yD= yD-vD;
+
+  // si sale de la pantalla, se desactiva
+  if (yD < 0) {
+    disparoActivo = false;
+  }
+}
+
  }
 
 function dibujarStickman() {
@@ -177,7 +198,21 @@ function actualizarCalendario() {
   //calendario
   text("Fecha: (" + dia + ") (" + mes + ") (" + anio + ")", 10, 20); 
 }
-
+function keyPressed() {
+  if (key === ' ') {
+    if (!disparoActivo) {   // solo si no hay disparo
+      disparoActivo = true;
+      xD = xP;              // sale desde el muñeco
+      yD = headY;
+    }
+  }
+  if (keyCode === UP_ARROW) {
+    // Solo saltamos si estamos en el suelo
+    if (yP === groundY) {
+      vY = jumpV;
+    }
+  }
+}
 </script>
 </body>
 </html>
