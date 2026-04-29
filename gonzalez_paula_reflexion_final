@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>Reflexión final del curso</title>
+
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background: #f4f4f4;
+          color: #222;
+        }
+
+        .pagina {
+          max-width: 900px;
+          margin: 0 auto;
+          background: white;
+          padding: 20px;
+          border-radius: 12px;
+        }
+
+        h1, h2 {
+          margin-top: 0;
+        }
+
+        p {
+          line-height: 1.6;
+        }
+      </style>
+    </head>
+    <body>
+
+      <div class="pagina">
+
+        <h1>Reflexión final del curso</h1>
+
+        <h2>1. Qué hemos trabajado</h2>
+        <p>Hemos trabajado con paginas web del tipo html o javasript. Tambien hemos aprendido a utilizar
+la realidad virtual y a usar teachable machine.</p>
+
+        <h2>2. Qué he aprendido</h2>
+        <p>He aprendido a programar y a entender como funcionan las páginas web.</p>
+
+        <h2>3. Qué me ha resultado más interesante</h2>
+        <p>Lo que mas resultante me ha interesado ha sido la perte de RA ya que es muy visual.</p>
+
+        <h2>4. Qué me ha resultado más difícil o menos interesante</h2>
+        <p>La parte de javascript porque no la acabé de entender del todo.</p>
+
+        <h2>5. Utilidad de lo aprendido</h2>
+        <p>Lo que he aprendido me parece muy util ya que lo necesitaré probablemente para el futuro.</p>
+
+        <h2>6. Valoración final</h2>
+        <p>Me ha gustado el curso ya que ha sido muy relajado y he aprendido mucho.</p>
+
+      </div>
+
+    </body>
+    </html>
